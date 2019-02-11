@@ -27,8 +27,17 @@ export class AllergieComponent implements OnInit {
     );
   }
 
-  update(id: number, changes: any) {
-    this.allergieService.update(id, changes).subscribe(
+  update(allergie: Allergie) {
+    this.allergieService.update(allergie).subscribe(
+      (res) => {
+       // const index = this.allergies.findIndex(allergie => allergie.idAllergie === id);
+       // this.allergies[index] = res;
+      }
+    );
+  }
+
+  findOne(id: number) {
+    this.allergieService.findOne(id).subscribe(
       (res) => {
         const index = this.allergies.findIndex(allergie => allergie.idAllergie === id);
         this.allergies[index] = res;

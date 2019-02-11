@@ -8,13 +8,15 @@ import {HttpClientModule} from '@angular/common/http';
 import {AllergieDetailComponent} from './allergie-detail/allergie-detail.component';
 import {AllergieCreateComponent} from './allergie-create/allergie-create.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import {AllergieUpdateComponent} from './allergie-update/allergie-update.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AllergieComponent,
     AllergieDetailComponent,
-    AllergieCreateComponent
+    AllergieCreateComponent,
+    AllergieUpdateComponent
   ],
   imports: [
     BrowserModule,

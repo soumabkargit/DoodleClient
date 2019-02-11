@@ -16,12 +16,16 @@ export class AllergieService {
     return this.http.get<Allergie[]>(this.allergieUrl);
   }
 
+  public findOne(id: number)  {
+    return this.http.get<Allergie>(this.allergieUrl + '/' + + id);
+  }
+
   public save(allergie: Allergie) {
     return this.http.post<Allergie>(this.allergieUrl, allergie);
   }
 
-  public update(id: number, changes: any) {
-    return this.http.put<Allergie>(this.allergieUrl + '/' + id, changes);
+  public update(allergie: Allergie) {
+    return this.http.put<Allergie>(this.allergieUrl , allergie);
   }
 
   public delete(id: number) {

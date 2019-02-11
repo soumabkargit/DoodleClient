@@ -21,13 +21,13 @@
         <td>{{ allergie.libelleAllergie }}</td>
         <td>
           <div class="btn-group" role="group" aria-label="Basic example">
-            <a type="button" [routerLink]="['/allergies', allergie.idAllergie]" class="btn btn-primary">
+            <a type="button" [routerLink]="['/allergies/detail', allergie.idAllergie]" class="btn btn-primary">
               <i class="fas fa-eye"></i>
             </a>
-            <a type="button" [routerLink]="['/allergies', allergie.idAllergie]" class="btn btn-secondary">
+            <a type="button"  [routerLink]="['/allergies/update', allergie.idAllergie]" class="btn btn-secondary">
               <i class="far fa-edit"></i>
             </a>
-            <button type="button" (click)="destroy(allergie.idAllergie)" class="btn btn-danger">
+            <button type="button" (click)="delete(allergie.idAllergie)" class="btn btn-danger">
               <i class="fas fa-trash"></i>
             </button>
           </div>
