@@ -1,0 +1,39 @@
+<div class="card-body">
+
+  <ul class="text-center list-inline py-3">
+    <li class="list-inline-item"><a routerLink="/allergies/create" class="btn btn-info">Ajouter Allergie</a></li>
+  </ul>
+</div>
+
+<div class="card my-5">
+  <div class="card-body">
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Libellé Allergie</th>
+        <th scope="col">Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let allergie of allergies">
+        <td>{{ allergie.idAllergie }}</td>
+        <td>{{ allergie.libelleAllergie }}</td>
+        <td>
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <a type="button" [routerLink]="['/allergies', allergie.idAllergie]" class="btn btn-primary">
+              <i class="fas fa-eye"></i>
+            </a>
+            <a type="button" [routerLink]="['/allergies', allergie.idAllergie]" class="btn btn-secondary">
+              <i class="far fa-edit"></i>
+            </a>
+            <button type="button" (click)="destroy(allergie.idAllergie)" class="btn btn-danger">
+              <i class="fas fa-trash"></i>
+            </button>
+          </div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
