@@ -25,5 +25,6 @@ export class AllergieCreateComponent implements OnInit {
     this.service.save(allergie).subscribe(
       (res) => console.log(res)
     );
+    window.history.back();
   }
 }
